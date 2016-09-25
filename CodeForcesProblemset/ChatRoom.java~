@@ -1,0 +1,16 @@
+import java.util.*;
+
+public class ChatRoom{
+
+    public static void main(String[]args){
+	Scanner sc = new Scanner(System.in);
+
+	Queue q = new LinkedList();
+
+	String wordS = next();
+
+	for(String x : wordS.split("")){
+	    System.out.println(x);
+	}
+    }
+}

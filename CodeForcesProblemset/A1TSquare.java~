@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class A1TSquare{
+    
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	int n = sc.nextInt();
+	int m = sc.nextInt();
+	int a = sc.nextInt();
+	int totn, totm;
+	
+	if(n%a==0){
+	    totn=n/a;
+	}else{
+	    totn=(n/a)+1;
+	}
+	if(m%a==0){
+	    totm=m/a;
+	}else{
+	    totm=((m/a)+1);
+	}
+    
+        System.out.println(totn*totm);
+    }
+
+}

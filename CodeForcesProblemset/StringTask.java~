@@ -1,0 +1,17 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+class StringTask{
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+	String line = sc.next();
+
+	line.lowerCase();
+	
+
+    }
+
+
+}

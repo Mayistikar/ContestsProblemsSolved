@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.LinkedList;
+
+public class Twins{
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+	int n = sc.nextInt();
+	LinkedList<Integer> monedas = new LinkedList<Integer>();
+	int sumTotal;
+
+	while(n>0){
+
+	    
+	    monedas
+	    n--;
+	}
+
+    }
+}
