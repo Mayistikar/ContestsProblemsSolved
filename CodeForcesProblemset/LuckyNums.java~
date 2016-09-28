@@ -1,0 +1,28 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+public class LuckyNums{
+
+
+    public static String[] numsLuckies(int digitos){
+
+	String[] listaNumeros = new String[digitos];
+
+	return listaNumeros;
+    }
+    
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	int n = sc.nextInt();
+
+	if(n<10){
+
+	}else if(n<100){
+
+	}else if(n<1000){
+
+	}
+    }
+}
