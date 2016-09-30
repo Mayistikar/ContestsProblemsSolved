@@ -30,6 +30,7 @@ public class LuckyNums{
 
 
     public static int numLucky(Node nodo){
+	
 	String numerox="";
 
 	while(nodo.getNextNode()!=null){
@@ -47,7 +48,6 @@ public class LuckyNums{
     
     
     public static int[] numsLuckies(int digitos){
-
 
 	int cantLuckies = 0;
 	
