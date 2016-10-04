@@ -1,0 +1,22 @@
+import java.util.Scanner;
+import java.util.LinkedList;
+
+
+
+class NthSmallest{
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	int t = sc.nextInt();
+	LinkedList lista = new LinkedList();
+
+	while(t>0){
+
+	    
+	    t--;
+	}
+    }
+    
+}

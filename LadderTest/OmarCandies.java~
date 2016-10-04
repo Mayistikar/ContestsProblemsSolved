@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.LinkedList;
+import java.util.Arrays;
+
+
+class OmarCandies{
+
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	int t = sc.nextInt();
+	String s;
+
+	while(t>0){
+
+	    s=sc.next();
+	    
+	    t--;
+	}
+    }
+}

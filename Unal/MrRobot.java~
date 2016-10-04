@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class MrRobot{
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	int t = sc.nextInt();
+	String s = sc.next();
+	String k = sc.next();
+      
+	char[] sch = s.toBinaryArray();
+	char[] kc = k.toBinaryArray();
+	char[] e = k.toBinaryArray();
+
+	System.out.println(String.valueOf(sch));
+	
+	for(int i=0; i<s.length()-1; i++){
+	    if((sch[i]=='1' && kc[i]=='1')||(sch[i]=='0' && kc[i]=='0')){
+		e[i]='0';
+	    }else if((sch[i]=='0' && kc[i]=='1')||(sch[i]=='1' && kc[i]=='0')){
+		e[i]='1';
+	    }
+	}
+	System.out.println(String.valueOf(e));
+    }
+}

@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+class SquaredString{
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	String line = sc.next();
+	int c = line.size();
+    }
+}

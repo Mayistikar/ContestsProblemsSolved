@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+class ArabicEnglish{
+
+    public static void main(String[]ars){
+
+	Scanner sc = new Scanner(System.in);
+
+	int t = sc.nextInt();
+
+	while(t>0){
+
+	    t--;
+	}
+
+	
+    }
+}

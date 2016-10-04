@@ -1,0 +1,10 @@
+class EnteroBinario{
+
+    public static void main(String[]args){
+
+	int numeroDecimal = 10;
+	String binario = Integer.toBinaryString(numeroDecimal);
+	System.out.print(binario);
+    }
+    
+}

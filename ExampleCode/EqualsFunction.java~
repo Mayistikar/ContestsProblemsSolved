@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+class EqualsFunction{
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	char x = sc.next();
+	char y = sc.next();
+
+	System.out.println(x.equals(y));
+	System.out.println(y.equals(x));
+    }
+
+}
