@@ -14,7 +14,9 @@ class HallPreparation{
     }
 
     public static int verRepet(int[][] s, int i, int j, LinkedList<Integer> r){
-
+	if(s[i][j]==-1){
+	    return 0;
+	}
 	for(int z=0; z<r.size(); z++){
 	    if(s[i][j]==r.get(z)){
 		return 0;
@@ -79,12 +81,16 @@ class HallPreparation{
 	    }
 	    //	    imprimir(hall, nx, mx);
 
-	    for(int p = 0; p<n; p++){
-		for(int u = 0; u<m; u++){
+	    for(int p = 1; p<nx-1; p++){
+		for(int u = 1; u<mx-1; u++){
+		    //  System.out.println(hall[p][u]);
 		    contador+=verRepet(hall,p,u,list);
+		    //  System.out.println("c:"+contador);
 		}
 	    }
+	    list.clear();
 	    System.out.println(contador);
+	    contador=0;
 	    t--;
 	}
 
