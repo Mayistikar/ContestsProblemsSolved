@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Supermarket{
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	int n = sc.nextInt();
+	int s = sc.nextInt();
+	int suma = 0;
+
+	while(n>0){
+	    suma+=sc.nextInt();
+	    n--;
+	}
+	if(s>=suma){
+
+	    System.out.print("Yes");
+	}else{
+	    System.out.print("No");
+	}
+    }
+
+}
