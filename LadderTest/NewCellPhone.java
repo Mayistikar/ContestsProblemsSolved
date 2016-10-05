@@ -20,11 +20,11 @@ class NewCellPhone{
 	int u = sc.nextInt();
 	while(u>0){
 	    search = sc.next();
-	    var=sc.next();
 
 	    for(int i=0;i<n;i++){
 
 		if(mat[i][0].toLowerCase().equals(search.toLowerCase())){
+		    mat[i][1]=sc.next();
 		    mat[i][2]=sc.next();
 		}
 	    }
