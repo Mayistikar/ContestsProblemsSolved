@@ -1,0 +1,56 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+class NewCellPhone{
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	int n = sc.nextInt();
+	int nn = n;
+	String[][] direct = new String[n][3];
+	String[] line1;
+	String[] line2;
+	String u;
+	String update;
+	while(n>0){
+	    u = sc.nextLine();
+	    System.out.println(u);
+	    line1 = u.split(" ");
+	    System.out.print(Arrays.toString(line1));
+	    for(int x=0; x<nn; x++){
+		for(int y=0; y<3; y++){
+		    direct[x][y] = line1[y];
+		}
+	    }	    
+	    n--;
+	}
+	int s = sc.nextInt();
+	while(s>0){
+	    update = sc.next();
+	    line2 = update.split(" ");
+	    for(int z=0; z<nn; z++){
+		if(direct[z][0].equals(line2[0])){
+		    direct[z][2] = line2[2];
+		}
+	    }
+	    s--;
+	}
+	while(nn>0){
+	    u = sc.next();
+	    line1 = u.split(" ");
+	    for(int r=0; r<n; r++){
+		for(int t=0; t<3; t++){
+		    System.out.print(direct[r][t]);
+		}
+	    }	    
+	    nn--;
+	}
+	
+    }
+
+
+
+
+}

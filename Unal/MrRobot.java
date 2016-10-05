@@ -3,57 +3,64 @@ import java.util.Arrays;
 
 public class MrRobot{
 
+    public static String binario(String s){
+	String sx="";
+	String lsx="";
+	char[] ls = s.toCharArray();
+	
+	for(int x=0; x<ls.length;x++){
+	    sx += Integer.toBinaryString((int)ls[x]);
+	    while((8-sx.length())>0){
+		sx="0"+sx;
+	    }
+	    lsx+=sx;
+	    sx="";
+	}
+	return lsx;
+    }
+
+    public static boolean[] arreglo(String s){
+	char[] ch = s.toCharArray();
+	boolean[] boolArr = new boolean[s.length()];
+	for(int p=0; p<s.length(); p++){
+	    if(ch[p]=='1'){
+		boolArr[p]=false;
+	    }else{
+		boolArr[p]=true;
+	    }
+	}
+	return boolArr;
+    }
+    
     public static void main(String[]args){
 
 	Scanner sc = new Scanner(System.in);
 
 	int t = sc.nextInt();
-	while(t>0){
-	    String s = sc.next();
-	    String k = sc.next();
-	    int tam = s.length();
-	    String sx="";
-	    String kx="";
-      
-	    char[] sch = new char[tam];
-	    char[] kch = new char[tam];
-	    boolean[] sbol;
-	    boolean[] kbol;
+	String sword, eword, S, E, K="";
+	boolean[] sch, ech;
 	
-	    for(int x=0; x<tam;x++){
-		sx += Integer.toBinaryString(s.codePointAt(x));
-		kx += Integer.toBinaryString(k.codePointAt(x));
-	    }
-	    System.out.println(sx);
-	    System.out.println(kx);
-	    char[] e = new char[sx.length()];
-	    sbol = new boolean[sx.length()];
-	    kbol = new boolean[sx.length()];
-	    
-	    sch = sx.toCharArray();
-	    kch = kx.toCharArray();
+	while(t>0){
+	    sword = sc.next();
+	    eword = sc.next();
 
-	    for(int y=0; y<sx.length(); y++){
+	    S=binario(sword.toUpperCase());
+	    E=binario(eword.toUpperCase());
 
-		if(sch[y]=='1'){
-		    sbol[y]=true;
+	    sch = arreglo(S);
+	    ech = arreglo(E);
+	
+	
+	    for(int x=0; x<sch.length; x++){
+		if(sch[x]^ech[x]){
+		    K+='1';
 		}else{
-		    sbol[y]=false;
-		}
-
-		if(kch[y]=='1'){
-		    kbol[y]=true;
-		}else{
-		    kbol[y]=false;
-		}
-	    
-		if(sbol[y] ^ kbol[y]){
-		    e[y]='1';
-		}else{
-		    e[y]='0';
+		    K+='0';
 		}
 	    }
-	    System.out.println(Arrays.toString(e));
+	    
+	    System.out.println(K);
+	    K="";
 	    t--;
 	}
     }
