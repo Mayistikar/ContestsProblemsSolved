@@ -19,5 +19,4 @@ class Supermarket{
 	}
 	System.out.print("Yes");
     }
-
 }
