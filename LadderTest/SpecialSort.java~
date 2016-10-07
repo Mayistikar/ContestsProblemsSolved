@@ -1,0 +1,39 @@
+import java.util.Scanner;
+import java.util.LinkedList;
+import java.util.Arrays;
+
+class SpecialSort{
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	int n = sc.nextInt();
+	int x = sc.nextInt();
+
+	LinkedList<Integer> par = new LinkedList<Integer>();
+	LinkedList<Integer> impar = new LinkedList<Integer>();
+	
+	while(n>0){
+
+	    x=sc.nextInt();
+	    if(x%2==0){
+		par.add(x);
+	    }else{
+		impar.add(x);
+	    }	    	    
+	    n--;
+	}
+
+	Arrays.toSort(par);
+	Arrays.toSort(impar);
+
+	for(Integer x:par){
+	    System.out.println(par[x]);
+	}
+	for(int y=impar.size()-1; y>=0; y--){
+	    System.out.println(impar[y]);
+	}
+    }
+
+}
