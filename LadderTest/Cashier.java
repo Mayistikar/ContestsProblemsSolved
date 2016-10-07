@@ -19,9 +19,6 @@ class Cashier{
 		while(n!=0){
 			
 			n=sc.nextInt();
-			
-			
 		}
-		
 	}
 }
