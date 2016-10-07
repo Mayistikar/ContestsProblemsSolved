@@ -2,7 +2,6 @@ import java.util.Scanner;
 import java.util.LinkedList;
 
 class Cashier{
-	
 	public static void addList(LinkedList<Node> listx, int numx){
 		for(int i=0; i<listx.size(); i++){
 			if(listx.get(i).getNum==numx){
