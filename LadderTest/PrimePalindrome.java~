@@ -1,0 +1,60 @@
+import java.util.Scanner;
+
+class PrimePalindrome{
+
+    public static String reverse(String palabra){
+	if(palabra.length()==1){
+	    return palabra;
+	}else{
+	    return reverse(palabra.substring(1))+palabra.charAt(0);
+	}
+    }
+    
+    public static boolean palindrome(int x){
+
+	String s = Long.toString(x);
+	if(s.equals(reverse(s))){
+	    System.out.println(s);
+	    return false;
+	}	
+	return true;
+    }
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+    
+	int nx = sc.nextInt();
+        int n = nx;
+	boolean palind = true;
+	boolean prime = true;
+
+	while(palind){
+	    //	    System.out.println(n+" n%2: "+n%2);
+	    if(n<10){
+		while(n<10){
+		    n++;
+		}
+		prime = false;
+	    }else if(n%2==0){
+		prime = false;
+	    }else if(n%2!=0){
+		//		System.out.println("entra: "+n);
+		for(int x=3; x<Math.sqrt(n)+1; x+=2){
+		    //		    System.out.println("x: "+x);
+		    if(n%x==0){
+			//		System.out.println(n+"no p");
+			prime = false;
+			break;
+		    }
+		}
+	    }
+	    if(prime){
+		//		System.out.println(n);
+		palind = palindrome(n);		
+	    }
+	    n++;
+	    prime = true;
+	}	
+    }
+}

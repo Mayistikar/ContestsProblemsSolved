@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.Arrays;
+
+
+class Private{
+
+    public static void main(String[]args){
+	Scanner sc = new Scanner(System.in);
+
+	int n = sc.nextInt();
+	String s;
+	String[] file;
+
+	while(n>0){
+
+	    s=(sc.next()).toLowerCase();
+	    System.out.println(s);
+
+	    file = s.split("\\.");
+
+	    System.out.println(Arrays.toString(file));
+	    //	    System.out.println(file[1]);
+	    
+
+	    
+	    
+	    n--;
+	}
+
+    }
+
+}
