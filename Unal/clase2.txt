@@ -1,0 +1,11 @@
+* Consultar Pequeño teorema de fermat...
+* Evitar usar puntos flotantes...
+* Consultar principio de inclusion y exclusion, matrices acumuladas.
+* Un algoritmo se puede considerar perfecto, si el tiempo de calculo, es menor  al tiempo de entrada o salida.
+
+###Busqueda Binaria###
+*Se aplica BB cuando el intervalo en el que se realiza la busqueda esta ordenado... o de manera ascendente o descendente.
+*Se busca el indice del elemento a buscar.
+*Es importante saber cual es el elemento con el que se va a comparar.
+*El numero de divisiones que se realiza hasta un intervalo de 1 es Log2(n)
+*No siempre se trabaja sobre arreglos.

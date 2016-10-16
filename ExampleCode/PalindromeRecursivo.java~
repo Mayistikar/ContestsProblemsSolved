@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+class PalindromeRecursivo{
+
+    public static palind(String palabra){
+
+	if(palabra.length()==1){
+	    return true;
+	}else if(palabra.length()>1){
+	    if(palabra.charAt(0)==palabra.charAt(palabra.length()-1)){
+		palind(palabra.substring(1,palabra.length()));
+	    }else{
+		return false;
+	    }
+	}
+	return true;
+    }
+
+    public static void main(String[]args){
+
+	Scanner sc = new Scanner(System.in);
+
+	String palabra = sc.next();
+
+	
+    }
+}
