@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.math.BigInteger;
 
 class PrimePalindrome{
 
@@ -13,10 +14,10 @@ class PrimePalindrome{
 	return false;
     }
 
-    public static boolean prime(long x){
-	if(x==1||x==0){
-	    return false;	
-	}else if(x!=2 && x%2==0){
+    public static boolean prime(BigInteger x){
+	if(x.toCompare(1)==0||x.toCompare(0)==0){
+	    return false;
+	}else if(x%2==0){
 	    return false;
 	}else if(x>7){
 	    for(long z=3; (z*z)<=x; z+=2){
@@ -31,18 +32,13 @@ class PrimePalindrome{
     public static void main(String[]args){
 
 	Scanner sc = new Scanner(System.in);
-
+    
 	long n = sc.nextLong();
 	boolean man = true;
-
 	
 	while(man){
-	    if(n<12){
-		if(prime(n)){
-		    System.out.print(n);
-		    man=false;
-		}
-	    }else if(Long.toString(n).length()%2!=0 && palind(Long.toString(n))){
+	    String pal = Long.toString(n);
+	    if(pal.length()%2!=0 && palind(Long.toString(n))){
 		//		System.out.println("palind: "+n);
 		if(prime(n)){
 		    //		    System.out.println("prime: "+n);
